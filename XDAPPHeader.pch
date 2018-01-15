@@ -1,0 +1,59 @@
+//
+//  XDAPPHeader.pch
+//  XDTrafficPart01
+//
+//  Created by xiao dou on 2018/1/5.
+//  Copyright © 2018年 xiao dou. All rights reserved.
+//
+
+#ifndef XDAPPHeader_pch
+#define XDAPPHeader_pch
+#import <MAMapKit/MAMapKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import "XDClloctionManager.h"
+#import "CLLocation+Additions.h"
+#import "XDMaqttClientManger.h"
+#import "XDDeviceManager.h"
+#import "XDClientManager.h"
+#import "XDFenceManager.h"
+#import "XDUserManager.h"
+#import "XDTimeManager.h"
+#import <UIImageView+WebCache.h>
+#import <UIButton+WebCache.h>
+#import "UIColor+Hex.h"
+#import <YYModel.h>
+#import "Masonry.h"
+#import "Constants.h"
+#import "FunBox.h"
+#import "MJRefresh.h"
+#define  ScreenWidth     ([UIScreen mainScreen].bounds.size.width)
+#define  ScreenHeight    ([UIScreen mainScreen].bounds.size.height)
+
+///** 底部tab高度 */
+#define TabBar_HEIGHT    ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+///** 顶部Nav高度+指示器 *
+#define NavigationBar_HEIGHT  (ScreenHeight == 812.0 ? 88 : 64)
+/******************    TabBar          *************/
+#define MallClassKey   @"rootVCClassString"
+#define MallTitleKey   @"title"
+#define MallImgKey     @"imageName"
+#define MallSelImgKey  @"selectedImageName"
+
+
+//weak
+#define WEAKSELF typeof(self) __weak weakSelf = self;
+#define STRONGSELF typeof(self) __strong strongSelf = self;
+#define STRONGSELFFor(object) typeof(object) __strong strongSelf = object;
+
+/**头像展位图*/
+#define PLACEHODELIMAGE [UIImage imageNamed:@"man_icon"]
+/**普通展位图*/
+#define PLACEHODELIMAGEcommon [UIImage imageNamed:@"gerenzhongxintouxiang"]
+
+//常用判空
+#define kDictIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0)
+#define kStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil ||str == NULL || [str length] < 1 ? YES : NO )
+#define RGB(R,G,B) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1.0]
+#define APIHEADStr(string) [NSString stringWithFormat:@"http://api.4things.cn%@",string];
+#endif /* XDAPPHeader_pch */
+

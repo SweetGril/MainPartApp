@@ -7,15 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FD08A8379667998346DE44E /* libPods-XDTrafficPart02.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7CD52DDF95816D3DA5843AB /* libPods-XDTrafficPart02.a */; };
 		38FAD80620072F10006A970E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD80520072F10006A970E /* AppDelegate.m */; };
 		38FAD80920072F10006A970E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD80820072F10006A970E /* ViewController.m */; };
-		38FAD80C20072F10006A970E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FAD80A20072F10006A970E /* Main.storyboard */; };
 		38FAD80F20072F10006A970E /* XDTrafficPart02.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD80D20072F10006A970E /* XDTrafficPart02.xcdatamodeld */; };
 		38FAD81120072F10006A970E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38FAD81020072F10006A970E /* Assets.xcassets */; };
 		38FAD81420072F10006A970E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FAD81220072F10006A970E /* LaunchScreen.storyboard */; };
 		38FAD81720072F10006A970E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD81620072F10006A970E /* main.m */; };
 		38FAD82120072F10006A970E /* XDTrafficPart02Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD82020072F10006A970E /* XDTrafficPart02Tests.m */; };
 		38FAD82C20072F10006A970E /* XDTrafficPart02UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD82B20072F10006A970E /* XDTrafficPart02UITests.m */; };
+		38FAD83C20072F88006A970E /* XDNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD83B20072F88006A970E /* XDNetWork.m */; };
+		38FAD85120072F99006A970E /* XDBaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD83F20072F98006A970E /* XDBaseMapViewController.m */; };
+		38FAD85220072F99006A970E /* XDBaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD84120072F98006A970E /* XDBaseNavViewController.m */; };
+		38FAD85320072F99006A970E /* XDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD84320072F98006A970E /* XDBaseViewController.m */; };
+		38FAD85420072F99006A970E /* XDCustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD84620072F98006A970E /* XDCustomCalloutView.m */; };
+		38FAD85520072F99006A970E /* XDEditFencePointAntion.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD84820072F98006A970E /* XDEditFencePointAntion.m */; };
+		38FAD85620072F99006A970E /* XDFenceAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD84A20072F98006A970E /* XDFenceAnnotation.m */; };
+		38FAD85720072F99006A970E /* XDFenceEditAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD84C20072F98006A970E /* XDFenceEditAnnotation.m */; };
+		38FAD85820072F99006A970E /* XDMAPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD84E20072F98006A970E /* XDMAPointAnnotation.m */; };
+		38FAD85920072F99006A970E /* XDVehicleAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD85020072F98006A970E /* XDVehicleAnnotationView.m */; };
+		38FAD86120072FA1006A970E /* CLLocation+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD85C20072FA1006A970E /* CLLocation+Additions.m */; };
+		38FAD86220072FA1006A970E /* XDAMapReGeocodeSearchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD85E20072FA1006A970E /* XDAMapReGeocodeSearchRequest.m */; };
+		38FAD86320072FA1006A970E /* XDClloctionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD86020072FA1006A970E /* XDClloctionManager.m */; };
+		38FAD86620072FB0006A970E /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD86520072FB0006A970E /* Constants.m */; };
+		38FAD86C20072FBF006A970E /* EquipmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD86920072FBF006A970E /* EquipmentModel.m */; };
+		38FAD86D20072FBF006A970E /* XDDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD86B20072FBF006A970E /* XDDeviceManager.m */; };
+		38FAD87C20072FCE006A970E /* FunBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD87020072FCE006A970E /* FunBox.m */; };
+		38FAD87D20072FCE006A970E /* MQTTStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD87320072FCE006A970E /* MQTTStatus.m */; };
+		38FAD87E20072FCE006A970E /* XDClientManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD87520072FCE006A970E /* XDClientManager.m */; };
+		38FAD87F20072FCE006A970E /* XDMaqttClientManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD87720072FCE006A970E /* XDMaqttClientManger.m */; };
+		38FAD88020072FCE006A970E /* XDMqttMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD87920072FCE006A970E /* XDMqttMessage.m */; };
+		38FAD88120072FCE006A970E /* XDMsgDispose.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD87B20072FCE006A970E /* XDMsgDispose.m */; };
+		38FAD88820073258006A970E /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD88720073258006A970E /* UIColor+Hex.m */; };
+		38FAD890200732B6006A970E /* XDUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD88F200732B6006A970E /* XDUserManager.m */; };
+		38FAD89B2007343E006A970E /* XDCirlcle.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD8942007343D006A970E /* XDCirlcle.m */; };
+		38FAD89C2007343E006A970E /* XDCricleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD8962007343D006A970E /* XDCricleModel.m */; };
+		38FAD89D2007343E006A970E /* XDMAPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD8982007343D006A970E /* XDMAPolygon.m */; };
+		38FAD89E2007343E006A970E /* XDFenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD89A2007343D006A970E /* XDFenceManager.m */; };
+		38FAD8A2200734F6006A970E /* XDEquipmentList.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD8A1200734F6006A970E /* XDEquipmentList.m */; };
+		38FAD8A7200736C9006A970E /* XDEquipmentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD8A5200736C9006A970E /* XDEquipmentTableViewCell.m */; };
+		38FAD8A8200736C9006A970E /* XDEquipmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38FAD8A6200736C9006A970E /* XDEquipmentTableViewCell.xib */; };
+		38FAD8AB20076D4B006A970E /* XDEditEquipmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD8AA20076D4B006A970E /* XDEditEquipmentViewController.m */; };
+		38FAD8AF20076DAD006A970E /* XDSetInfoDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD8AD20076DAD006A970E /* XDSetInfoDetailModel.m */; };
+		38FAD8B320076F02006A970E /* XDSelectTypeEquipmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38FAD8B020076F00006A970E /* XDSelectTypeEquipmentCell.xib */; };
+		38FAD8B420076F02006A970E /* XDSelectTypeEquipmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD8B120076F01006A970E /* XDSelectTypeEquipmentCell.m */; };
+		38FAD8B820076F25006A970E /* XDMyFacilityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD8B520076F23006A970E /* XDMyFacilityTableViewCell.m */; };
+		38FAD8B920076F25006A970E /* XDMyFacilityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38FAD8B720076F25006A970E /* XDMyFacilityTableViewCell.xib */; };
+		38FAD8BD20076F34006A970E /* XDAddTeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38FAD8BA20076F33006A970E /* XDAddTeamTableViewCell.xib */; };
+		38FAD8BE20076F34006A970E /* XDAddTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD8BC20076F34006A970E /* XDAddTeamTableViewCell.m */; };
+		38FAD8C220076F99006A970E /* XDTeamPeopleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD8BF20076F97006A970E /* XDTeamPeopleCell.m */; };
+		38FAD8C320076F99006A970E /* XDTeamPeopleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38FAD8C020076F98006A970E /* XDTeamPeopleCell.xib */; };
+		38FAD8C620076FC1006A970E /* XDUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD8C520076FC0006A970E /* XDUserModel.m */; };
+		38FAD8CA2007703C006A970E /* XDMyFacilityTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD8C72007703A006A970E /* XDMyFacilityTwoCell.m */; };
+		38FAD8CB2007703C006A970E /* XDMyFacilityTwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38FAD8C92007703B006A970E /* XDMyFacilityTwoCell.xib */; };
+		38FAD8CE20084964006A970E /* XDTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD8CD20084964006A970E /* XDTimeManager.m */; };
+		38FAD8D220084F12006A970E /* XDAddTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD8CF20084F11006A970E /* XDAddTeamViewController.m */; };
+		38FAD8D320084F12006A970E /* XDAddTeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38FAD8D120084F12006A970E /* XDAddTeamViewController.xib */; };
+		38FAD8D720084F26006A970E /* XDUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD8D420084F25006A970E /* XDUserViewController.m */; };
+		38FAD8D820084F26006A970E /* XDUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38FAD8D520084F25006A970E /* XDUserViewController.xib */; };
+		38FAD9DD200C94E7006A970E /* XDMonitoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD9D0200C94E7006A970E /* XDMonitoViewController.m */; };
+		38FAD9DE200C94E7006A970E /* XDPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD9D2200C94E7006A970E /* XDPersonViewController.m */; };
+		38FAD9DF200C94E7006A970E /* XDMonitoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD9D5200C94E7006A970E /* XDMonitoManager.m */; };
+		38FAD9E0200C94E7006A970E /* XDDetailsPartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD9D8200C94E7006A970E /* XDDetailsPartView.m */; };
+		38FAD9E1200C94E7006A970E /* XDDetailsPartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38FAD9D9200C94E7006A970E /* XDDetailsPartView.xib */; };
+		38FAD9E2200C94E7006A970E /* XDDeviceEditTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD9DB200C94E7006A970E /* XDDeviceEditTipView.m */; };
+		38FAD9E3200C94E7006A970E /* XDDeviceEditTipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38FAD9DC200C94E7006A970E /* XDDeviceEditTipView.xib */; };
+		38FAD9E6200C978C006A970E /* XDTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD9E5200C978C006A970E /* XDTabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +98,6 @@
 		38FAD80520072F10006A970E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		38FAD80720072F10006A970E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		38FAD80820072F10006A970E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		38FAD80B20072F10006A970E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38FAD80E20072F10006A970E /* XDTrafficPart02.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XDTrafficPart02.xcdatamodel; sourceTree = "<group>"; };
 		38FAD81020072F10006A970E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38FAD81320072F10006A970E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +109,115 @@
 		38FAD82720072F10006A970E /* XDTrafficPart02UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XDTrafficPart02UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FAD82B20072F10006A970E /* XDTrafficPart02UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDTrafficPart02UITests.m; sourceTree = "<group>"; };
 		38FAD82D20072F10006A970E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38FAD83A20072F88006A970E /* XDNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDNetWork.h; sourceTree = "<group>"; };
+		38FAD83B20072F88006A970E /* XDNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDNetWork.m; sourceTree = "<group>"; };
+		38FAD83E20072F98006A970E /* XDBaseMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDBaseMapViewController.h; sourceTree = "<group>"; };
+		38FAD83F20072F98006A970E /* XDBaseMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDBaseMapViewController.m; sourceTree = "<group>"; };
+		38FAD84020072F98006A970E /* XDBaseNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDBaseNavViewController.h; sourceTree = "<group>"; };
+		38FAD84120072F98006A970E /* XDBaseNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDBaseNavViewController.m; sourceTree = "<group>"; };
+		38FAD84220072F98006A970E /* XDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDBaseViewController.h; sourceTree = "<group>"; };
+		38FAD84320072F98006A970E /* XDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDBaseViewController.m; sourceTree = "<group>"; };
+		38FAD84520072F98006A970E /* XDCustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDCustomCalloutView.h; sourceTree = "<group>"; };
+		38FAD84620072F98006A970E /* XDCustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDCustomCalloutView.m; sourceTree = "<group>"; };
+		38FAD84720072F98006A970E /* XDEditFencePointAntion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDEditFencePointAntion.h; sourceTree = "<group>"; };
+		38FAD84820072F98006A970E /* XDEditFencePointAntion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDEditFencePointAntion.m; sourceTree = "<group>"; };
+		38FAD84920072F98006A970E /* XDFenceAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDFenceAnnotation.h; sourceTree = "<group>"; };
+		38FAD84A20072F98006A970E /* XDFenceAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDFenceAnnotation.m; sourceTree = "<group>"; };
+		38FAD84B20072F98006A970E /* XDFenceEditAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDFenceEditAnnotation.h; sourceTree = "<group>"; };
+		38FAD84C20072F98006A970E /* XDFenceEditAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDFenceEditAnnotation.m; sourceTree = "<group>"; };
+		38FAD84D20072F98006A970E /* XDMAPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDMAPointAnnotation.h; sourceTree = "<group>"; };
+		38FAD84E20072F98006A970E /* XDMAPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDMAPointAnnotation.m; sourceTree = "<group>"; };
+		38FAD84F20072F98006A970E /* XDVehicleAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDVehicleAnnotationView.h; sourceTree = "<group>"; };
+		38FAD85020072F98006A970E /* XDVehicleAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDVehicleAnnotationView.m; sourceTree = "<group>"; };
+		38FAD85B20072FA1006A970E /* CLLocation+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+Additions.h"; sourceTree = "<group>"; };
+		38FAD85C20072FA1006A970E /* CLLocation+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+Additions.m"; sourceTree = "<group>"; };
+		38FAD85D20072FA1006A970E /* XDAMapReGeocodeSearchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDAMapReGeocodeSearchRequest.h; sourceTree = "<group>"; };
+		38FAD85E20072FA1006A970E /* XDAMapReGeocodeSearchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDAMapReGeocodeSearchRequest.m; sourceTree = "<group>"; };
+		38FAD85F20072FA1006A970E /* XDClloctionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDClloctionManager.h; sourceTree = "<group>"; };
+		38FAD86020072FA1006A970E /* XDClloctionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDClloctionManager.m; sourceTree = "<group>"; };
+		38FAD86420072FAF006A970E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		38FAD86520072FB0006A970E /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		38FAD86820072FBF006A970E /* EquipmentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipmentModel.h; sourceTree = "<group>"; };
+		38FAD86920072FBF006A970E /* EquipmentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipmentModel.m; sourceTree = "<group>"; };
+		38FAD86A20072FBF006A970E /* XDDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDDeviceManager.h; sourceTree = "<group>"; };
+		38FAD86B20072FBF006A970E /* XDDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDDeviceManager.m; sourceTree = "<group>"; };
+		38FAD86F20072FCE006A970E /* FunBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunBox.h; sourceTree = "<group>"; };
+		38FAD87020072FCE006A970E /* FunBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunBox.m; sourceTree = "<group>"; };
+		38FAD87120072FCE006A970E /* MQTTClientManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQTTClientManagerDelegate.h; sourceTree = "<group>"; };
+		38FAD87220072FCE006A970E /* MQTTStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQTTStatus.h; sourceTree = "<group>"; };
+		38FAD87320072FCE006A970E /* MQTTStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQTTStatus.m; sourceTree = "<group>"; };
+		38FAD87420072FCE006A970E /* XDClientManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDClientManager.h; sourceTree = "<group>"; };
+		38FAD87520072FCE006A970E /* XDClientManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDClientManager.m; sourceTree = "<group>"; };
+		38FAD87620072FCE006A970E /* XDMaqttClientManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDMaqttClientManger.h; sourceTree = "<group>"; };
+		38FAD87720072FCE006A970E /* XDMaqttClientManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDMaqttClientManger.m; sourceTree = "<group>"; };
+		38FAD87820072FCE006A970E /* XDMqttMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDMqttMessage.h; sourceTree = "<group>"; };
+		38FAD87920072FCE006A970E /* XDMqttMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDMqttMessage.m; sourceTree = "<group>"; };
+		38FAD87A20072FCE006A970E /* XDMsgDispose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDMsgDispose.h; sourceTree = "<group>"; };
+		38FAD87B20072FCE006A970E /* XDMsgDispose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDMsgDispose.m; sourceTree = "<group>"; };
+		38FAD88220072FEA006A970E /* XDAPPHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDAPPHeader.pch; sourceTree = "<group>"; };
+		38FAD88620073258006A970E /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		38FAD88720073258006A970E /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		38FAD88E200732B6006A970E /* XDUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDUserManager.h; sourceTree = "<group>"; };
+		38FAD88F200732B6006A970E /* XDUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDUserManager.m; sourceTree = "<group>"; };
+		38FAD8932007343D006A970E /* XDCirlcle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDCirlcle.h; sourceTree = "<group>"; };
+		38FAD8942007343D006A970E /* XDCirlcle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDCirlcle.m; sourceTree = "<group>"; };
+		38FAD8952007343D006A970E /* XDCricleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDCricleModel.h; sourceTree = "<group>"; };
+		38FAD8962007343D006A970E /* XDCricleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDCricleModel.m; sourceTree = "<group>"; };
+		38FAD8972007343D006A970E /* XDMAPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDMAPolygon.h; sourceTree = "<group>"; };
+		38FAD8982007343D006A970E /* XDMAPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDMAPolygon.m; sourceTree = "<group>"; };
+		38FAD8992007343D006A970E /* XDFenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDFenceManager.h; sourceTree = "<group>"; };
+		38FAD89A2007343D006A970E /* XDFenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDFenceManager.m; sourceTree = "<group>"; };
+		38FAD8A0200734F6006A970E /* XDEquipmentList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDEquipmentList.h; sourceTree = "<group>"; };
+		38FAD8A1200734F6006A970E /* XDEquipmentList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDEquipmentList.m; sourceTree = "<group>"; };
+		38FAD8A4200736C8006A970E /* XDEquipmentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDEquipmentTableViewCell.h; sourceTree = "<group>"; };
+		38FAD8A5200736C9006A970E /* XDEquipmentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDEquipmentTableViewCell.m; sourceTree = "<group>"; };
+		38FAD8A6200736C9006A970E /* XDEquipmentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XDEquipmentTableViewCell.xib; sourceTree = "<group>"; };
+		38FAD8A920076D4B006A970E /* XDEditEquipmentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDEditEquipmentViewController.h; sourceTree = "<group>"; };
+		38FAD8AA20076D4B006A970E /* XDEditEquipmentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDEditEquipmentViewController.m; sourceTree = "<group>"; };
+		38FAD8AD20076DAD006A970E /* XDSetInfoDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDSetInfoDetailModel.m; sourceTree = "<group>"; };
+		38FAD8AE20076DAD006A970E /* XDSetInfoDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDSetInfoDetailModel.h; sourceTree = "<group>"; };
+		38FAD8B020076F00006A970E /* XDSelectTypeEquipmentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XDSelectTypeEquipmentCell.xib; sourceTree = "<group>"; };
+		38FAD8B120076F01006A970E /* XDSelectTypeEquipmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDSelectTypeEquipmentCell.m; sourceTree = "<group>"; };
+		38FAD8B220076F01006A970E /* XDSelectTypeEquipmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDSelectTypeEquipmentCell.h; sourceTree = "<group>"; };
+		38FAD8B520076F23006A970E /* XDMyFacilityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDMyFacilityTableViewCell.m; sourceTree = "<group>"; };
+		38FAD8B620076F23006A970E /* XDMyFacilityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDMyFacilityTableViewCell.h; sourceTree = "<group>"; };
+		38FAD8B720076F25006A970E /* XDMyFacilityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XDMyFacilityTableViewCell.xib; sourceTree = "<group>"; };
+		38FAD8BA20076F33006A970E /* XDAddTeamTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XDAddTeamTableViewCell.xib; sourceTree = "<group>"; };
+		38FAD8BB20076F33006A970E /* XDAddTeamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDAddTeamTableViewCell.h; sourceTree = "<group>"; };
+		38FAD8BC20076F34006A970E /* XDAddTeamTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDAddTeamTableViewCell.m; sourceTree = "<group>"; };
+		38FAD8BF20076F97006A970E /* XDTeamPeopleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDTeamPeopleCell.m; sourceTree = "<group>"; };
+		38FAD8C020076F98006A970E /* XDTeamPeopleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XDTeamPeopleCell.xib; sourceTree = "<group>"; };
+		38FAD8C120076F98006A970E /* XDTeamPeopleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDTeamPeopleCell.h; sourceTree = "<group>"; };
+		38FAD8C420076FC0006A970E /* XDUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDUserModel.h; sourceTree = "<group>"; };
+		38FAD8C520076FC0006A970E /* XDUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDUserModel.m; sourceTree = "<group>"; };
+		38FAD8C72007703A006A970E /* XDMyFacilityTwoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDMyFacilityTwoCell.m; sourceTree = "<group>"; };
+		38FAD8C82007703B006A970E /* XDMyFacilityTwoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDMyFacilityTwoCell.h; sourceTree = "<group>"; };
+		38FAD8C92007703B006A970E /* XDMyFacilityTwoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XDMyFacilityTwoCell.xib; sourceTree = "<group>"; };
+		38FAD8CC20084964006A970E /* XDTimeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDTimeManager.h; sourceTree = "<group>"; };
+		38FAD8CD20084964006A970E /* XDTimeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDTimeManager.m; sourceTree = "<group>"; };
+		38FAD8CF20084F11006A970E /* XDAddTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDAddTeamViewController.m; sourceTree = "<group>"; };
+		38FAD8D020084F11006A970E /* XDAddTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDAddTeamViewController.h; sourceTree = "<group>"; };
+		38FAD8D120084F12006A970E /* XDAddTeamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XDAddTeamViewController.xib; sourceTree = "<group>"; };
+		38FAD8D420084F25006A970E /* XDUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDUserViewController.m; sourceTree = "<group>"; };
+		38FAD8D520084F25006A970E /* XDUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XDUserViewController.xib; sourceTree = "<group>"; };
+		38FAD8D620084F25006A970E /* XDUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDUserViewController.h; sourceTree = "<group>"; };
+		38FAD9CF200C94E7006A970E /* XDMonitoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDMonitoViewController.h; sourceTree = "<group>"; };
+		38FAD9D0200C94E7006A970E /* XDMonitoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDMonitoViewController.m; sourceTree = "<group>"; };
+		38FAD9D1200C94E7006A970E /* XDPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDPersonViewController.h; sourceTree = "<group>"; };
+		38FAD9D2200C94E7006A970E /* XDPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDPersonViewController.m; sourceTree = "<group>"; };
+		38FAD9D4200C94E7006A970E /* XDMonitoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDMonitoManager.h; sourceTree = "<group>"; };
+		38FAD9D5200C94E7006A970E /* XDMonitoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDMonitoManager.m; sourceTree = "<group>"; };
+		38FAD9D7200C94E7006A970E /* XDDetailsPartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDDetailsPartView.h; sourceTree = "<group>"; };
+		38FAD9D8200C94E7006A970E /* XDDetailsPartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDDetailsPartView.m; sourceTree = "<group>"; };
+		38FAD9D9200C94E7006A970E /* XDDetailsPartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XDDetailsPartView.xib; sourceTree = "<group>"; };
+		38FAD9DA200C94E7006A970E /* XDDeviceEditTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDDeviceEditTipView.h; sourceTree = "<group>"; };
+		38FAD9DB200C94E7006A970E /* XDDeviceEditTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDDeviceEditTipView.m; sourceTree = "<group>"; };
+		38FAD9DC200C94E7006A970E /* XDDeviceEditTipView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XDDeviceEditTipView.xib; sourceTree = "<group>"; };
+		38FAD9E4200C978C006A970E /* XDTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDTabBarViewController.h; sourceTree = "<group>"; };
+		38FAD9E5200C978C006A970E /* XDTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDTabBarViewController.m; sourceTree = "<group>"; };
+		76295588763BED2293DCC109 /* Pods-XDTrafficPart02.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDTrafficPart02.release.xcconfig"; path = "Pods/Target Support Files/Pods-XDTrafficPart02/Pods-XDTrafficPart02.release.xcconfig"; sourceTree = "<group>"; };
+		E7CD52DDF95816D3DA5843AB /* libPods-XDTrafficPart02.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XDTrafficPart02.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F95478F1AAF0D24BD16E7A67 /* Pods-XDTrafficPart02.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDTrafficPart02.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XDTrafficPart02/Pods-XDTrafficPart02.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +225,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FD08A8379667998346DE44E /* libPods-XDTrafficPart02.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,10 +249,23 @@
 		38FAD7F820072F10006A970E = {
 			isa = PBXGroup;
 			children = (
+				38FAD86420072FAF006A970E /* Constants.h */,
+				38FAD86520072FB0006A970E /* Constants.m */,
+				38FAD88220072FEA006A970E /* XDAPPHeader.pch */,
+				38FAD8912007343D006A970E /* XDFenceManager(围栏管理) */,
+				38FAD88D200732B6006A970E /* XDUserManager(用户信息管理) */,
+				38FAD88520073258006A970E /* ExtendedAttributes */,
+				38FAD86E20072FCE006A970E /* MQTTManager(消息处理类) */,
+				38FAD86720072FBF006A970E /* MonitorManager(设备管理) */,
+				38FAD85A20072FA1006A970E /* CLLocationManager(位置管理) */,
+				38FAD83D20072F98006A970E /* BaseVC(基础控制器) */,
+				38FAD83920072F88006A970E /* BaseNetBox(基础网络请求) */,
 				38FAD80320072F10006A970E /* XDTrafficPart02 */,
 				38FAD81F20072F10006A970E /* XDTrafficPart02Tests */,
 				38FAD82A20072F10006A970E /* XDTrafficPart02UITests */,
 				38FAD80220072F10006A970E /* Products */,
+				84FCEBDFBD01708BA678888A /* Pods */,
+				3DE21554BBE4881EF0D6D8AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,7 +286,8 @@
 				38FAD80520072F10006A970E /* AppDelegate.m */,
 				38FAD80720072F10006A970E /* ViewController.h */,
 				38FAD80820072F10006A970E /* ViewController.m */,
-				38FAD80A20072F10006A970E /* Main.storyboard */,
+				38FAD9CD200C94E7006A970E /* MonitorPart(监控中心) */,
+				38FAD89F200734B3006A970E /* XDDeviceCenter(设备中心) */,
 				38FAD81020072F10006A970E /* Assets.xcassets */,
 				38FAD81220072F10006A970E /* LaunchScreen.storyboard */,
 				38FAD81520072F10006A970E /* Info.plist */,
@@ -135,6 +315,252 @@
 			path = XDTrafficPart02UITests;
 			sourceTree = "<group>";
 		};
+		38FAD83920072F88006A970E /* BaseNetBox(基础网络请求) */ = {
+			isa = PBXGroup;
+			children = (
+				38FAD83A20072F88006A970E /* XDNetWork.h */,
+				38FAD83B20072F88006A970E /* XDNetWork.m */,
+			);
+			path = "BaseNetBox(基础网络请求)";
+			sourceTree = "<group>";
+		};
+		38FAD83D20072F98006A970E /* BaseVC(基础控制器) */ = {
+			isa = PBXGroup;
+			children = (
+				38FAD83E20072F98006A970E /* XDBaseMapViewController.h */,
+				38FAD83F20072F98006A970E /* XDBaseMapViewController.m */,
+				38FAD84020072F98006A970E /* XDBaseNavViewController.h */,
+				38FAD84120072F98006A970E /* XDBaseNavViewController.m */,
+				38FAD84220072F98006A970E /* XDBaseViewController.h */,
+				38FAD84320072F98006A970E /* XDBaseViewController.m */,
+				38FAD9E4200C978C006A970E /* XDTabBarViewController.h */,
+				38FAD9E5200C978C006A970E /* XDTabBarViewController.m */,
+				38FAD84420072F98006A970E /* XDMAAnnotationViewGroup */,
+			);
+			path = "BaseVC(基础控制器)";
+			sourceTree = "<group>";
+		};
+		38FAD84420072F98006A970E /* XDMAAnnotationViewGroup */ = {
+			isa = PBXGroup;
+			children = (
+				38FAD84520072F98006A970E /* XDCustomCalloutView.h */,
+				38FAD84620072F98006A970E /* XDCustomCalloutView.m */,
+				38FAD84720072F98006A970E /* XDEditFencePointAntion.h */,
+				38FAD84820072F98006A970E /* XDEditFencePointAntion.m */,
+				38FAD84920072F98006A970E /* XDFenceAnnotation.h */,
+				38FAD84A20072F98006A970E /* XDFenceAnnotation.m */,
+				38FAD84B20072F98006A970E /* XDFenceEditAnnotation.h */,
+				38FAD84C20072F98006A970E /* XDFenceEditAnnotation.m */,
+				38FAD84D20072F98006A970E /* XDMAPointAnnotation.h */,
+				38FAD84E20072F98006A970E /* XDMAPointAnnotation.m */,
+				38FAD84F20072F98006A970E /* XDVehicleAnnotationView.h */,
+				38FAD85020072F98006A970E /* XDVehicleAnnotationView.m */,
+			);
+			path = XDMAAnnotationViewGroup;
+			sourceTree = "<group>";
+		};
+		38FAD85A20072FA1006A970E /* CLLocationManager(位置管理) */ = {
+			isa = PBXGroup;
+			children = (
+				38FAD85B20072FA1006A970E /* CLLocation+Additions.h */,
+				38FAD85C20072FA1006A970E /* CLLocation+Additions.m */,
+				38FAD85D20072FA1006A970E /* XDAMapReGeocodeSearchRequest.h */,
+				38FAD85E20072FA1006A970E /* XDAMapReGeocodeSearchRequest.m */,
+				38FAD85F20072FA1006A970E /* XDClloctionManager.h */,
+				38FAD86020072FA1006A970E /* XDClloctionManager.m */,
+			);
+			path = "CLLocationManager(位置管理)";
+			sourceTree = "<group>";
+		};
+		38FAD86720072FBF006A970E /* MonitorManager(设备管理) */ = {
+			isa = PBXGroup;
+			children = (
+				38FAD86820072FBF006A970E /* EquipmentModel.h */,
+				38FAD86920072FBF006A970E /* EquipmentModel.m */,
+				38FAD86A20072FBF006A970E /* XDDeviceManager.h */,
+				38FAD86B20072FBF006A970E /* XDDeviceManager.m */,
+			);
+			path = "MonitorManager(设备管理)";
+			sourceTree = "<group>";
+		};
+		38FAD86E20072FCE006A970E /* MQTTManager(消息处理类) */ = {
+			isa = PBXGroup;
+			children = (
+				38FAD86F20072FCE006A970E /* FunBox.h */,
+				38FAD87020072FCE006A970E /* FunBox.m */,
+				38FAD8CC20084964006A970E /* XDTimeManager.h */,
+				38FAD8CD20084964006A970E /* XDTimeManager.m */,
+				38FAD87120072FCE006A970E /* MQTTClientManagerDelegate.h */,
+				38FAD87220072FCE006A970E /* MQTTStatus.h */,
+				38FAD87320072FCE006A970E /* MQTTStatus.m */,
+				38FAD87420072FCE006A970E /* XDClientManager.h */,
+				38FAD87520072FCE006A970E /* XDClientManager.m */,
+				38FAD87620072FCE006A970E /* XDMaqttClientManger.h */,
+				38FAD87720072FCE006A970E /* XDMaqttClientManger.m */,
+				38FAD87820072FCE006A970E /* XDMqttMessage.h */,
+				38FAD87920072FCE006A970E /* XDMqttMessage.m */,
+				38FAD87A20072FCE006A970E /* XDMsgDispose.h */,
+				38FAD87B20072FCE006A970E /* XDMsgDispose.m */,
+			);
+			path = "MQTTManager(消息处理类)";
+			sourceTree = "<group>";
+		};
+		38FAD88520073258006A970E /* ExtendedAttributes */ = {
+			isa = PBXGroup;
+			children = (
+				38FAD88620073258006A970E /* UIColor+Hex.h */,
+				38FAD88720073258006A970E /* UIColor+Hex.m */,
+			);
+			path = ExtendedAttributes;
+			sourceTree = "<group>";
+		};
+		38FAD88D200732B6006A970E /* XDUserManager(用户信息管理) */ = {
+			isa = PBXGroup;
+			children = (
+				38FAD88E200732B6006A970E /* XDUserManager.h */,
+				38FAD88F200732B6006A970E /* XDUserManager.m */,
+			);
+			path = "XDUserManager(用户信息管理)";
+			sourceTree = "<group>";
+		};
+		38FAD8912007343D006A970E /* XDFenceManager(围栏管理) */ = {
+			isa = PBXGroup;
+			children = (
+				38FAD8922007343D006A970E /* Model */,
+				38FAD8992007343D006A970E /* XDFenceManager.h */,
+				38FAD89A2007343D006A970E /* XDFenceManager.m */,
+			);
+			path = "XDFenceManager(围栏管理)";
+			sourceTree = "<group>";
+		};
+		38FAD8922007343D006A970E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38FAD8932007343D006A970E /* XDCirlcle.h */,
+				38FAD8942007343D006A970E /* XDCirlcle.m */,
+				38FAD8952007343D006A970E /* XDCricleModel.h */,
+				38FAD8962007343D006A970E /* XDCricleModel.m */,
+				38FAD8972007343D006A970E /* XDMAPolygon.h */,
+				38FAD8982007343D006A970E /* XDMAPolygon.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		38FAD89F200734B3006A970E /* XDDeviceCenter(设备中心) */ = {
+			isa = PBXGroup;
+			children = (
+				38FAD8AC20076D9F006A970E /* Model */,
+				38FAD8A3200736AD006A970E /* View */,
+				38FAD8A0200734F6006A970E /* XDEquipmentList.h */,
+				38FAD8A1200734F6006A970E /* XDEquipmentList.m */,
+				38FAD8A920076D4B006A970E /* XDEditEquipmentViewController.h */,
+				38FAD8AA20076D4B006A970E /* XDEditEquipmentViewController.m */,
+				38FAD8D020084F11006A970E /* XDAddTeamViewController.h */,
+				38FAD8CF20084F11006A970E /* XDAddTeamViewController.m */,
+				38FAD8D120084F12006A970E /* XDAddTeamViewController.xib */,
+				38FAD8D620084F25006A970E /* XDUserViewController.h */,
+				38FAD8D420084F25006A970E /* XDUserViewController.m */,
+				38FAD8D520084F25006A970E /* XDUserViewController.xib */,
+			);
+			path = "XDDeviceCenter(设备中心)";
+			sourceTree = "<group>";
+		};
+		38FAD8A3200736AD006A970E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				38FAD8C82007703B006A970E /* XDMyFacilityTwoCell.h */,
+				38FAD8C72007703A006A970E /* XDMyFacilityTwoCell.m */,
+				38FAD8C92007703B006A970E /* XDMyFacilityTwoCell.xib */,
+				38FAD8C120076F98006A970E /* XDTeamPeopleCell.h */,
+				38FAD8BF20076F97006A970E /* XDTeamPeopleCell.m */,
+				38FAD8C020076F98006A970E /* XDTeamPeopleCell.xib */,
+				38FAD8BB20076F33006A970E /* XDAddTeamTableViewCell.h */,
+				38FAD8BC20076F34006A970E /* XDAddTeamTableViewCell.m */,
+				38FAD8BA20076F33006A970E /* XDAddTeamTableViewCell.xib */,
+				38FAD8B620076F23006A970E /* XDMyFacilityTableViewCell.h */,
+				38FAD8B520076F23006A970E /* XDMyFacilityTableViewCell.m */,
+				38FAD8B720076F25006A970E /* XDMyFacilityTableViewCell.xib */,
+				38FAD8B220076F01006A970E /* XDSelectTypeEquipmentCell.h */,
+				38FAD8B120076F01006A970E /* XDSelectTypeEquipmentCell.m */,
+				38FAD8B020076F00006A970E /* XDSelectTypeEquipmentCell.xib */,
+				38FAD8A4200736C8006A970E /* XDEquipmentTableViewCell.h */,
+				38FAD8A5200736C9006A970E /* XDEquipmentTableViewCell.m */,
+				38FAD8A6200736C9006A970E /* XDEquipmentTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		38FAD8AC20076D9F006A970E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38FAD8C420076FC0006A970E /* XDUserModel.h */,
+				38FAD8C520076FC0006A970E /* XDUserModel.m */,
+				38FAD8AE20076DAD006A970E /* XDSetInfoDetailModel.h */,
+				38FAD8AD20076DAD006A970E /* XDSetInfoDetailModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		38FAD9CD200C94E7006A970E /* MonitorPart(监控中心) */ = {
+			isa = PBXGroup;
+			children = (
+				38FAD9CE200C94E7006A970E /* Controller */,
+				38FAD9D3200C94E7006A970E /* Model */,
+				38FAD9D6200C94E7006A970E /* View */,
+			);
+			path = "MonitorPart(监控中心)";
+			sourceTree = "<group>";
+		};
+		38FAD9CE200C94E7006A970E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				38FAD9CF200C94E7006A970E /* XDMonitoViewController.h */,
+				38FAD9D0200C94E7006A970E /* XDMonitoViewController.m */,
+				38FAD9D1200C94E7006A970E /* XDPersonViewController.h */,
+				38FAD9D2200C94E7006A970E /* XDPersonViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		38FAD9D3200C94E7006A970E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38FAD9D4200C94E7006A970E /* XDMonitoManager.h */,
+				38FAD9D5200C94E7006A970E /* XDMonitoManager.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		38FAD9D6200C94E7006A970E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				38FAD9D7200C94E7006A970E /* XDDetailsPartView.h */,
+				38FAD9D8200C94E7006A970E /* XDDetailsPartView.m */,
+				38FAD9D9200C94E7006A970E /* XDDetailsPartView.xib */,
+				38FAD9DA200C94E7006A970E /* XDDeviceEditTipView.h */,
+				38FAD9DB200C94E7006A970E /* XDDeviceEditTipView.m */,
+				38FAD9DC200C94E7006A970E /* XDDeviceEditTipView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DE21554BBE4881EF0D6D8AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7CD52DDF95816D3DA5843AB /* libPods-XDTrafficPart02.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84FCEBDFBD01708BA678888A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F95478F1AAF0D24BD16E7A67 /* Pods-XDTrafficPart02.debug.xcconfig */,
+				76295588763BED2293DCC109 /* Pods-XDTrafficPart02.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,9 +568,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38FAD83020072F10006A970E /* Build configuration list for PBXNativeTarget "XDTrafficPart02" */;
 			buildPhases = (
+				C82AD5D4CDC1B7A3E10459A5 /* [CP] Check Pods Manifest.lock */,
 				38FAD7FD20072F10006A970E /* Sources */,
 				38FAD7FE20072F10006A970E /* Frameworks */,
 				38FAD7FF20072F10006A970E /* Resources */,
+				C3A3056905C3E77C7EEEFA63 /* [CP] Embed Pods Frameworks */,
+				F018218875C15E1AB1EC57F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,9 +670,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38FAD8C320076F99006A970E /* XDTeamPeopleCell.xib in Resources */,
+				38FAD8CB2007703C006A970E /* XDMyFacilityTwoCell.xib in Resources */,
+				38FAD8BD20076F34006A970E /* XDAddTeamTableViewCell.xib in Resources */,
+				38FAD8D820084F26006A970E /* XDUserViewController.xib in Resources */,
+				38FAD8B920076F25006A970E /* XDMyFacilityTableViewCell.xib in Resources */,
+				38FAD8B320076F02006A970E /* XDSelectTypeEquipmentCell.xib in Resources */,
+				38FAD8A8200736C9006A970E /* XDEquipmentTableViewCell.xib in Resources */,
+				38FAD9E1200C94E7006A970E /* XDDetailsPartView.xib in Resources */,
 				38FAD81420072F10006A970E /* LaunchScreen.storyboard in Resources */,
+				38FAD8D320084F12006A970E /* XDAddTeamViewController.xib in Resources */,
+				38FAD9E3200C94E7006A970E /* XDDeviceEditTipView.xib in Resources */,
 				38FAD81120072F10006A970E /* Assets.xcassets in Resources */,
-				38FAD80C20072F10006A970E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,15 +701,110 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C3A3056905C3E77C7EEEFA63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XDTrafficPart02/Pods-XDTrafficPart02-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C82AD5D4CDC1B7A3E10459A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F018218875C15E1AB1EC57F9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XDTrafficPart02/Pods-XDTrafficPart02-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		38FAD7FD20072F10006A970E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38FAD86220072FA1006A970E /* XDAMapReGeocodeSearchRequest.m in Sources */,
+				38FAD9DE200C94E7006A970E /* XDPersonViewController.m in Sources */,
+				38FAD83C20072F88006A970E /* XDNetWork.m in Sources */,
+				38FAD89C2007343E006A970E /* XDCricleModel.m in Sources */,
+				38FAD85220072F99006A970E /* XDBaseNavViewController.m in Sources */,
+				38FAD88020072FCE006A970E /* XDMqttMessage.m in Sources */,
+				38FAD9E0200C94E7006A970E /* XDDetailsPartView.m in Sources */,
+				38FAD8B420076F02006A970E /* XDSelectTypeEquipmentCell.m in Sources */,
 				38FAD80920072F10006A970E /* ViewController.m in Sources */,
+				38FAD8D220084F12006A970E /* XDAddTeamViewController.m in Sources */,
+				38FAD9DF200C94E7006A970E /* XDMonitoManager.m in Sources */,
 				38FAD80620072F10006A970E /* AppDelegate.m in Sources */,
+				38FAD87C20072FCE006A970E /* FunBox.m in Sources */,
+				38FAD8CA2007703C006A970E /* XDMyFacilityTwoCell.m in Sources */,
+				38FAD9E2200C94E7006A970E /* XDDeviceEditTipView.m in Sources */,
+				38FAD8AB20076D4B006A970E /* XDEditEquipmentViewController.m in Sources */,
+				38FAD8BE20076F34006A970E /* XDAddTeamTableViewCell.m in Sources */,
 				38FAD81720072F10006A970E /* main.m in Sources */,
+				38FAD9DD200C94E7006A970E /* XDMonitoViewController.m in Sources */,
+				38FAD86320072FA1006A970E /* XDClloctionManager.m in Sources */,
+				38FAD86D20072FBF006A970E /* XDDeviceManager.m in Sources */,
+				38FAD85520072F99006A970E /* XDEditFencePointAntion.m in Sources */,
+				38FAD87E20072FCE006A970E /* XDClientManager.m in Sources */,
+				38FAD85820072F99006A970E /* XDMAPointAnnotation.m in Sources */,
+				38FAD88820073258006A970E /* UIColor+Hex.m in Sources */,
+				38FAD89E2007343E006A970E /* XDFenceManager.m in Sources */,
+				38FAD89B2007343E006A970E /* XDCirlcle.m in Sources */,
+				38FAD85620072F99006A970E /* XDFenceAnnotation.m in Sources */,
+				38FAD8C220076F99006A970E /* XDTeamPeopleCell.m in Sources */,
+				38FAD85920072F99006A970E /* XDVehicleAnnotationView.m in Sources */,
+				38FAD8A2200734F6006A970E /* XDEquipmentList.m in Sources */,
+				38FAD8AF20076DAD006A970E /* XDSetInfoDetailModel.m in Sources */,
+				38FAD85120072F99006A970E /* XDBaseMapViewController.m in Sources */,
+				38FAD85720072F99006A970E /* XDFenceEditAnnotation.m in Sources */,
+				38FAD86C20072FBF006A970E /* EquipmentModel.m in Sources */,
+				38FAD86120072FA1006A970E /* CLLocation+Additions.m in Sources */,
+				38FAD9E6200C978C006A970E /* XDTabBarViewController.m in Sources */,
+				38FAD890200732B6006A970E /* XDUserManager.m in Sources */,
 				38FAD80F20072F10006A970E /* XDTrafficPart02.xcdatamodeld in Sources */,
+				38FAD8A7200736C9006A970E /* XDEquipmentTableViewCell.m in Sources */,
+				38FAD85320072F99006A970E /* XDBaseViewController.m in Sources */,
+				38FAD89D2007343E006A970E /* XDMAPolygon.m in Sources */,
+				38FAD87F20072FCE006A970E /* XDMaqttClientManger.m in Sources */,
+				38FAD87D20072FCE006A970E /* MQTTStatus.m in Sources */,
+				38FAD85420072F99006A970E /* XDCustomCalloutView.m in Sources */,
+				38FAD86620072FB0006A970E /* Constants.m in Sources */,
+				38FAD8CE20084964006A970E /* XDTimeManager.m in Sources */,
+				38FAD8B820076F25006A970E /* XDMyFacilityTableViewCell.m in Sources */,
+				38FAD8C620076FC1006A970E /* XDUserModel.m in Sources */,
+				38FAD8D720084F26006A970E /* XDUserViewController.m in Sources */,
+				38FAD88120072FCE006A970E /* XDMsgDispose.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,14 +840,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		38FAD80A20072F10006A970E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				38FAD80B20072F10006A970E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		38FAD81220072F10006A970E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -432,13 +957,16 @@
 		};
 		38FAD83120072F10006A970E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F95478F1AAF0D24BD16E7A67 /* Pods-XDTrafficPart02.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L7544NHCWU;
+				GCC_PREFIX_HEADER = /Users/xiaodou/Desktop/XDTrafficPart02/XDAPPHeader.pch;
 				INFOPLIST_FILE = XDTrafficPart02/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xiaodou.XDTrafficPart02;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiaodou.TrafficAPPLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -446,13 +974,16 @@
 		};
 		38FAD83220072F10006A970E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76295588763BED2293DCC109 /* Pods-XDTrafficPart02.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L7544NHCWU;
+				GCC_PREFIX_HEADER = /Users/xiaodou/Desktop/XDTrafficPart02/XDAPPHeader.pch;
 				INFOPLIST_FILE = XDTrafficPart02/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xiaodou.XDTrafficPart02;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiaodou.TrafficAPPLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
