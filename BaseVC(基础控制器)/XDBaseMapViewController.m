@@ -23,7 +23,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self creatMapView];
     [self requestFenceData];
-    
+    [[XDDeviceManager sharedManager] addObserver:self forKeyPath:@"deleteDeviceTopic" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+    [[XDDeviceManager sharedManager] addObserver:self forKeyPath:@"changeDeviceTopic" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+    [self.view addObserver:self forKeyPath:@"backgroundColor" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
 }
 - (void)creatMapView{
     [AMapServices sharedServices].enableHTTPS = YES;
@@ -160,8 +162,14 @@
         }
         //设置地图缩放比例
         [_bgMapView showAnnotations:[XDDeviceManager sharedManager].allDeviceAnnotationArray animated:NO];
-        CGFloat zoomLevel = _bgMapView.zoomLevel;
-        [_bgMapView setZoomLevel:zoomLevel-1 atPivot:self.view.center animated:NO];
+        if ([XDDeviceManager sharedManager].allDeviceAnnotationArray.count==1) {
+      
+            [_bgMapView setZoomLevel:13 atPivot:self.view.center animated:NO];
+        }
+        else{
+            CGFloat zoomLevel = _bgMapView.zoomLevel;
+            [_bgMapView setZoomLevel:zoomLevel-1 atPivot:self.view.center animated:NO];
+        }
     }
     else{
         [_bgMapView setZoomLevel:13 atPivot:self.view.center animated:NO];
@@ -270,14 +278,23 @@
     [self.bgMapView addOverlay:commonPoly];
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id>*)change context:(void *)context{
+    
+    
+   
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    self.view.backgroundColor = [UIColor purpleColor];
+}
+
 #pragma mark 设备后位置信息的实时更改
 - (void)deviceMoveWithCLLocationCoordinate2D:(CLLocationCoordinate2D )coordinate andSpeedStr:(NSString *)speedStr andTopic:(NSString *)topic{
     
 }
 - (void)dealloc{
-    //    UITableView *a ;
-    //    UITableViewCell *cell = [a cellForRowAtIndexPath:<#(nonnull NSIndexPath *)#>]
     NSLog(@"-XDBaseMapViewController---- dealloc");
+    [[XDDeviceManager sharedManager] removeObserver:self forKeyPath:@"changeDeviceTopic" context:nil];
+    [[XDDeviceManager sharedManager] removeObserver:self forKeyPath:@"deleteDeviceTopic" context:nil];
 }
 
 - (void)didReceiveMemoryWarning {

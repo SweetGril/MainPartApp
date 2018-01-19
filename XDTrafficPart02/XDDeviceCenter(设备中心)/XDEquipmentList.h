@@ -10,7 +10,6 @@
 
 @interface XDEquipmentList : XDBaseViewController<UITableViewDelegate,UITableViewDataSource>
 {
-    BOOL isEdit;//是否进行文字编辑中
     NSIndexPath * selectObjIndex; //选中编辑的cell 索引
 }
 @property (nonatomic,strong)UITableView *bgTableView;

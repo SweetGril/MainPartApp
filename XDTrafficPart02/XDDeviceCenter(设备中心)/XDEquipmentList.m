@@ -19,18 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     [[XDDeviceManager sharedManager] addObserver:self forKeyPath:@"changeDeviceTopic" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
     [[XDDeviceManager sharedManager] addObserver:self forKeyPath:@"changePlaceTopic" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
-    
     [[XDDeviceManager sharedManager] postDeviceListsuccess:^(NSDictionary *success) {
         [self creatView];
-     
     } failure:^(NSError *failure) {
     }];
-   
-  
 }
 -(void)creatView{
     self.navigationItem.title = @"我的设备";
@@ -78,7 +73,18 @@
     UITableViewRowAction *deleteRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@" 删除 "handler:^(UITableViewRowAction *action,NSIndexPath *indexPath) {
         
         NSLog(@"解绑选定");
-        [weakSelf deleteData:indexPath];
+        NSMutableArray *resultArray = [XDDeviceManager sharedManager].allDeviceKeyArray;
+        NSString *keyStr = resultArray[indexPath.row];
+        [XDDeviceManager sharedManager].deleteDeviceTopic = keyStr;
+        
+        [[XDMaqttClientManger sharedInstance]unsubscriptSingleWithTopic:keyStr];
+
+        [[XDDeviceManager sharedManager].allDeviceKeyArray removeObjectAtIndex:indexPath.row];
+        [[XDDeviceManager sharedManager].allDeviceDictionary removeObjectForKey:keyStr];
+        [[NSNotificationCenter defaultCenter] postNotificationName:XDNotifatinDeviceDelete object:nil];
+        [weakSelf.bgTableView reloadData];
+        
+//      [weakSelf deleteData:indexPath];
     }];
     deleteRowAction.backgroundColor = [UIColor colorWithHexString:@"#FF0000"];
     return @[deleteRowAction,editRowAction];
@@ -93,11 +99,6 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (isEdit ==YES) {
-        [self endEditFun];
-        return;
-    }
-   
     EquipmentModel *modelObject = [[XDDeviceManager sharedManager]getModelWithIndex:indexPath.row];
     UINavigationController * nav = [self.tabBarController.viewControllers objectAtIndex:0];
     for (UIViewController *vc in nav.viewControllers) {
@@ -107,7 +108,6 @@
         }
     }
     self.tabBarController.selectedViewController = nav;
-
 }
 
 
@@ -117,8 +117,10 @@
     if ([keyPath isEqualToString:@"changeDeviceTopic"]==YES) {
         [_bgTableView reloadData];
     }
-
     if ([keyPath isEqualToString:@"changePlaceTopic"]==YES) {
+        if (self.bgTableView.editing == YES) {
+            return;
+        }
          [_bgTableView reloadData];
     }
 }
@@ -161,24 +163,18 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (void)endEditFun{
-    [self.view endEditing:YES];
-    isEdit = NO;
-    EquipmentModel *model = [[XDDeviceManager sharedManager] getModelWithIndex:selectObjIndex.row];
-    XDEquipmentTableViewCell *selectCell = (XDEquipmentTableViewCell *)[_bgTableView cellForRowAtIndexPath:selectObjIndex];
-    selectCell.titleField.text = model.deviceName;
-    selectCell.titleField.userInteractionEnabled = NO;
-}
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self endEditFun];
+   [self.view endEditing:YES];
 }
 #pragma mark 设备消息接收
 -(void)liveManagerDidReceiveMessage:(NSNotification *)notifi{
     
 }
 - (void)dealloc{
+     NSLog(@"=XDEquipmentList====释放了");
     [[XDDeviceManager sharedManager] removeObserver:self forKeyPath:@"changeDeviceTopic" context:nil];
-    NSLog(@"=XDEquipmentList====释放了");
+    [[XDDeviceManager sharedManager] removeObserver:self forKeyPath:@"changePlaceTopic" context:nil];
+   
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

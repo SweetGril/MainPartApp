@@ -239,6 +239,7 @@
     NSMutableDictionary *dataDic = [[NSMutableDictionary alloc] init];
     [dataDic setValue:_model.deviceId forKey:@"deviceId"];
     [[XDNetWork sharedInstance]postRequestWithUrl:url andParameters:dataDic success:^(NSDictionary *success) {
+        
         if ([success[@"code"] intValue]==200){
             _setInfoModel =[XDSetInfoDetailModel yy_modelWithDictionary:success[@"data"]];
         }

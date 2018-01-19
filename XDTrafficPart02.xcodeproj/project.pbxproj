@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1FD08A8379667998346DE44E /* libPods-XDTrafficPart02.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7CD52DDF95816D3DA5843AB /* libPods-XDTrafficPart02.a */; };
+		38283327200DEADC00BBEEE0 /* XDElectronVFenceListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3828331B200DEADC00BBEEE0 /* XDElectronVFenceListVC.m */; };
+		38283328200DEADC00BBEEE0 /* XDFenceInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3828331F200DEADC00BBEEE0 /* XDFenceInfoView.m */; };
+		38283329200DEADC00BBEEE0 /* XDFenceInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38283320200DEADC00BBEEE0 /* XDFenceInfoView.xib */; };
+		3828332A200DEADC00BBEEE0 /* XDFenceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38283322200DEADC00BBEEE0 /* XDFenceTableViewCell.m */; };
+		3828332B200DEADC00BBEEE0 /* XDFenceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38283323200DEADC00BBEEE0 /* XDFenceTableViewCell.xib */; };
+		3828332C200DEADC00BBEEE0 /* XDFenceTableViewTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38283325200DEADC00BBEEE0 /* XDFenceTableViewTwoCell.m */; };
+		3828332D200DEADC00BBEEE0 /* XDFenceTableViewTwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38283326200DEADC00BBEEE0 /* XDFenceTableViewTwoCell.xib */; };
 		38FAD80620072F10006A970E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD80520072F10006A970E /* AppDelegate.m */; };
 		38FAD80920072F10006A970E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD80820072F10006A970E /* ViewController.m */; };
 		38FAD80F20072F10006A970E /* XDTrafficPart02.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD80D20072F10006A970E /* XDTrafficPart02.xcdatamodeld */; };
@@ -93,6 +100,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3828331A200DEADC00BBEEE0 /* XDElectronVFenceListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDElectronVFenceListVC.h; sourceTree = "<group>"; };
+		3828331B200DEADC00BBEEE0 /* XDElectronVFenceListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDElectronVFenceListVC.m; sourceTree = "<group>"; };
+		3828331E200DEADC00BBEEE0 /* XDFenceInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDFenceInfoView.h; sourceTree = "<group>"; };
+		3828331F200DEADC00BBEEE0 /* XDFenceInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDFenceInfoView.m; sourceTree = "<group>"; };
+		38283320200DEADC00BBEEE0 /* XDFenceInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XDFenceInfoView.xib; sourceTree = "<group>"; };
+		38283321200DEADC00BBEEE0 /* XDFenceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDFenceTableViewCell.h; sourceTree = "<group>"; };
+		38283322200DEADC00BBEEE0 /* XDFenceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDFenceTableViewCell.m; sourceTree = "<group>"; };
+		38283323200DEADC00BBEEE0 /* XDFenceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XDFenceTableViewCell.xib; sourceTree = "<group>"; };
+		38283324200DEADC00BBEEE0 /* XDFenceTableViewTwoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDFenceTableViewTwoCell.h; sourceTree = "<group>"; };
+		38283325200DEADC00BBEEE0 /* XDFenceTableViewTwoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDFenceTableViewTwoCell.m; sourceTree = "<group>"; };
+		38283326200DEADC00BBEEE0 /* XDFenceTableViewTwoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XDFenceTableViewTwoCell.xib; sourceTree = "<group>"; };
 		38FAD80120072F10006A970E /* XDTrafficPart02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XDTrafficPart02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FAD80420072F10006A970E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		38FAD80520072F10006A970E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -246,6 +264,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38283318200DEADC00BBEEE0 /* XDFenceCenter(围栏部分) */ = {
+			isa = PBXGroup;
+			children = (
+				38283319200DEADC00BBEEE0 /* Controller */,
+				3828331C200DEADC00BBEEE0 /* Model */,
+				3828331D200DEADC00BBEEE0 /* View */,
+			);
+			path = "XDFenceCenter(围栏部分)";
+			sourceTree = "<group>";
+		};
+		38283319200DEADC00BBEEE0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3828331A200DEADC00BBEEE0 /* XDElectronVFenceListVC.h */,
+				3828331B200DEADC00BBEEE0 /* XDElectronVFenceListVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3828331C200DEADC00BBEEE0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3828331D200DEADC00BBEEE0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3828331E200DEADC00BBEEE0 /* XDFenceInfoView.h */,
+				3828331F200DEADC00BBEEE0 /* XDFenceInfoView.m */,
+				38283320200DEADC00BBEEE0 /* XDFenceInfoView.xib */,
+				38283321200DEADC00BBEEE0 /* XDFenceTableViewCell.h */,
+				38283322200DEADC00BBEEE0 /* XDFenceTableViewCell.m */,
+				38283323200DEADC00BBEEE0 /* XDFenceTableViewCell.xib */,
+				38283324200DEADC00BBEEE0 /* XDFenceTableViewTwoCell.h */,
+				38283325200DEADC00BBEEE0 /* XDFenceTableViewTwoCell.m */,
+				38283326200DEADC00BBEEE0 /* XDFenceTableViewTwoCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		38FAD7F820072F10006A970E = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +346,7 @@
 				38FAD80520072F10006A970E /* AppDelegate.m */,
 				38FAD80720072F10006A970E /* ViewController.h */,
 				38FAD80820072F10006A970E /* ViewController.m */,
+				38283318200DEADC00BBEEE0 /* XDFenceCenter(围栏部分) */,
 				38FAD9CD200C94E7006A970E /* MonitorPart(监控中心) */,
 				38FAD89F200734B3006A970E /* XDDeviceCenter(设备中心) */,
 				38FAD81020072F10006A970E /* Assets.xcassets */,
@@ -672,6 +733,7 @@
 			files = (
 				38FAD8C320076F99006A970E /* XDTeamPeopleCell.xib in Resources */,
 				38FAD8CB2007703C006A970E /* XDMyFacilityTwoCell.xib in Resources */,
+				38283329200DEADC00BBEEE0 /* XDFenceInfoView.xib in Resources */,
 				38FAD8BD20076F34006A970E /* XDAddTeamTableViewCell.xib in Resources */,
 				38FAD8D820084F26006A970E /* XDUserViewController.xib in Resources */,
 				38FAD8B920076F25006A970E /* XDMyFacilityTableViewCell.xib in Resources */,
@@ -679,7 +741,9 @@
 				38FAD8A8200736C9006A970E /* XDEquipmentTableViewCell.xib in Resources */,
 				38FAD9E1200C94E7006A970E /* XDDetailsPartView.xib in Resources */,
 				38FAD81420072F10006A970E /* LaunchScreen.storyboard in Resources */,
+				3828332D200DEADC00BBEEE0 /* XDFenceTableViewTwoCell.xib in Resources */,
 				38FAD8D320084F12006A970E /* XDAddTeamViewController.xib in Resources */,
+				3828332B200DEADC00BBEEE0 /* XDFenceTableViewCell.xib in Resources */,
 				38FAD9E3200C94E7006A970E /* XDDeviceEditTipView.xib in Resources */,
 				38FAD81120072F10006A970E /* Assets.xcassets in Resources */,
 			);
@@ -761,9 +825,11 @@
 				38FAD85220072F99006A970E /* XDBaseNavViewController.m in Sources */,
 				38FAD88020072FCE006A970E /* XDMqttMessage.m in Sources */,
 				38FAD9E0200C94E7006A970E /* XDDetailsPartView.m in Sources */,
+				38283327200DEADC00BBEEE0 /* XDElectronVFenceListVC.m in Sources */,
 				38FAD8B420076F02006A970E /* XDSelectTypeEquipmentCell.m in Sources */,
 				38FAD80920072F10006A970E /* ViewController.m in Sources */,
 				38FAD8D220084F12006A970E /* XDAddTeamViewController.m in Sources */,
+				38283328200DEADC00BBEEE0 /* XDFenceInfoView.m in Sources */,
 				38FAD9DF200C94E7006A970E /* XDMonitoManager.m in Sources */,
 				38FAD80620072F10006A970E /* AppDelegate.m in Sources */,
 				38FAD87C20072FCE006A970E /* FunBox.m in Sources */,
@@ -790,6 +856,7 @@
 				38FAD85720072F99006A970E /* XDFenceEditAnnotation.m in Sources */,
 				38FAD86C20072FBF006A970E /* EquipmentModel.m in Sources */,
 				38FAD86120072FA1006A970E /* CLLocation+Additions.m in Sources */,
+				3828332C200DEADC00BBEEE0 /* XDFenceTableViewTwoCell.m in Sources */,
 				38FAD9E6200C978C006A970E /* XDTabBarViewController.m in Sources */,
 				38FAD890200732B6006A970E /* XDUserManager.m in Sources */,
 				38FAD80F20072F10006A970E /* XDTrafficPart02.xcdatamodeld in Sources */,
@@ -799,6 +866,7 @@
 				38FAD87F20072FCE006A970E /* XDMaqttClientManger.m in Sources */,
 				38FAD87D20072FCE006A970E /* MQTTStatus.m in Sources */,
 				38FAD85420072F99006A970E /* XDCustomCalloutView.m in Sources */,
+				3828332A200DEADC00BBEEE0 /* XDFenceTableViewCell.m in Sources */,
 				38FAD86620072FB0006A970E /* Constants.m in Sources */,
 				38FAD8CE20084964006A970E /* XDTimeManager.m in Sources */,
 				38FAD8B820076F25006A970E /* XDMyFacilityTableViewCell.m in Sources */,
@@ -962,7 +1030,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L7544NHCWU;
-				GCC_PREFIX_HEADER = /Users/xiaodou/Desktop/XDTrafficPart02/XDAPPHeader.pch;
+				GCC_PREFIX_HEADER = /Users/xiaodou/Desktop/XDFencePart/XDAPPHeader.pch;
 				INFOPLIST_FILE = XDTrafficPart02/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -979,7 +1047,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L7544NHCWU;
-				GCC_PREFIX_HEADER = /Users/xiaodou/Desktop/XDTrafficPart02/XDAPPHeader.pch;
+				GCC_PREFIX_HEADER = /Users/xiaodou/Desktop/XDFencePart/XDAPPHeader.pch;
 				INFOPLIST_FILE = XDTrafficPart02/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

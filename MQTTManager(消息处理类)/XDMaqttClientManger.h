@@ -12,4 +12,8 @@
 @interface XDMaqttClientManger : NSObject<XDClientManagerDelegate>
 + (XDMaqttClientManger*)sharedInstance;
 - (void)connectMqtt;
+/**单条 设备取消订阅*/
+- (void)unsubscriptSingleWithTopic:(NSString *)topicStr;
+/**单条 订阅*/
+- (void)subscriptionSingleWithTopic:(NSString *)topicStr;
 @end

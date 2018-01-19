@@ -242,6 +242,7 @@ typedef void(^flagBlock)(BOOL flag) ;//定义block
         //接收设备管理加入申请
         if ([requestDic[@"event"] isEqualToString:@"BindRequest"]==YES) {
           self.messageStyle = XDRequestDeviceMessageType;
+           
         }
         //被邀请加入设备管理加入
         else if ([requestDic[@"event"] isEqualToString:@"invite"]==YES){
@@ -254,7 +255,10 @@ typedef void(^flagBlock)(BOOL flag) ;//定义block
         //被 删除 某设备的管理权限 需要重新请求列表数据
         else if ([requestDic[@"event"] isEqualToString:@"UnbindByAdmin"]==YES){
             NSLog(@"----===---%@",requestDic);
+          
             self.messageStyle = XDRemoveDeviceMessageType;
+            EquipmentModel *objModel = [[XDDeviceManager sharedManager].allDeviceDictionary objectForKey:requestDic[@"deviceId"]];
+//            [XDDeviceManager sharedManager].deleteDeviceTopic =objModel
         }
         //预警消息
         else{

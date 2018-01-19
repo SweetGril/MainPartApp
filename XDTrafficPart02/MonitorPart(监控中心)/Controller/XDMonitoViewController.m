@@ -7,6 +7,7 @@
 //
 
 #import "XDMonitoViewController.h"
+#import "XDElectronVFenceListVC.h"
 #import "XDDeviceManager.h"
 #import "XDMonitoManager.h"
 /**监控中心*/
@@ -16,10 +17,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title =@"监控中心";
-    [[XDDeviceManager sharedManager] addObserver:self forKeyPath:@"changeDeviceTopic" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+    [XDMonitoManager sharedInstance].bgMapView = self.bgMapView;
+    [[XDFenceManager sharedManager]addObserver:self forKeyPath:@"deleteFenceShape" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(editFence:) name:XDChageFenceNotification object:nil];
-      self.objectModel= nil;
+    
+    [self.view addObserver:self forKeyPath:@"backgroundColor" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+    
+    self.objectModel= nil;
+    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithTitle:@"1111" style:UIBarButtonItemStylePlain target:self action:@selector(rightBtnClick)];
+    self.navigationItem.rightBarButtonItem =rightBtn;
+}
+
+- (void)rightBtnClick{
+    XDElectronVFenceListVC *vc = [[XDElectronVFenceListVC alloc] init];
+    vc.hidesBottomBarWhenPushed =YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 #pragma mark 设备的长按事件
 - (void)clickEditLongTouchModel:(EquipmentModel *)modelObj andAnnotation:(XDVehicleAnnotationView *)annotationView{
@@ -86,7 +99,7 @@
 #pragma mark 触碰围栏后的操作
 - (void)touchMapWithCoordinate:(CLLocationCoordinate2D)coordinate andShape:(id)shape andTouchType:(BOOL)touchStyle{
     
-    [[XDMonitoManager sharedInstance] touchMapWithCoordinate:coordinate andShape:shape andTouchType:touchStyle andEditPointAnntion:_annotation andCirlcle:_circleShow andPolygon:_polyLineShow andBgMapView:self.bgMapView];
+    [[XDMonitoManager sharedInstance] touchMapWithCoordinate:coordinate andShape:shape andTouchType:touchStyle andEditPointAnntion:_annotation andCirlcle:_circleShow andShowPolygon:_polyLineShow andBgMapView:self.bgMapView];
     _annotation = [XDMonitoManager sharedInstance].selectAnnotation;
     _circleShow = [XDMonitoManager sharedInstance].circleShow;
     _polyLineShow = [XDMonitoManager sharedInstance].polyLineShow;
@@ -103,14 +116,24 @@
 
 #pragma mark 修改围栏状态信息的方法
 -(void)editFence:(NSNotification *)notifiction{
-    
+
     NSNumber * selectNumber = (NSNumber *)notifiction.object;
     int selectNum = [selectNumber intValue];
     XDCricleModel * fenceModel = [XDFenceManager sharedManager].allFenceDataArray[selectNum];
     id shape = [XDFenceManager sharedManager].fenceShapeArray [selectNum];
-    [[XDMonitoManager sharedInstance]reloadFenceWithFenceModel:fenceModel andObj:shape selectNun:selectNum];
-  
-    
+    //更新的围栏是选中的
+    if (_annotation.indexNum == selectNum&&_annotation!=nil) {
+        [[XDMonitoManager sharedInstance]reloadFenceWithFenceModel:fenceModel andObj:shape selectNun:selectNum];
+        //长按选中的情况，需要更改上面的编辑view
+        if ([XDMonitoManager sharedInstance].selectAnnotation.fenceStyle == YES) {
+            [self hideMapSupportView];
+            [self touchMapWithCoordinate: self.bgMapView.centerCoordinate andShape:[XDFenceManager sharedManager].fenceShapeArray[selectNum] andTouchType:YES];
+        }
+    }
+    else{
+        [[XDMonitoManager sharedInstance]reloadSingleWithFenceModel:fenceModel andObj:shape selectNun:selectNum];
+    }
+//
 }
 #pragma mark ----修改设备的名称
 - (void)setDeviceInfoBlock{
@@ -121,7 +144,6 @@
 //
     [_editDeviceView removeFromSuperview];
     _editDeviceView=nil;
- 
     self.bgMapView.scrollEnabled = YES;
 }
 #pragma mark 隐藏界面中的 弹出部分View
@@ -135,6 +157,7 @@
     self.selectPoint = nil;
     _equipmodel =nil;
     self.bgMapView.scrollEnabled = YES;
+    [XDMonitoManager clearManager];
     [_editDeviceView removeFromSuperview];
 }
 
@@ -154,39 +177,29 @@
             }
         }
     }
-    
 }
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id>*)change context:(void *)context{
+    //当设备的 类型 名称 发生修改
     if ([keyPath isEqualToString:@"changeDeviceTopic"]==YES) {
-        NSArray *allPoint = [self.bgMapView annotations];
-        for (int a =0; a<allPoint.count; a++) {
-            MAPointAnnotation *annotation = allPoint[a];
-            if ([annotation isKindOfClass:[XDMAPointAnnotation class]]==YES) {
-                XDMAPointAnnotation *objanntation = (XDMAPointAnnotation *)annotation;
-                if ([objanntation.model.realTopic isEqualToString:[XDDeviceManager sharedManager].changeDeviceTopic]) {
-                    [self.bgMapView removeAnnotation:annotation];
-                    [[XDDeviceManager sharedManager].allDeviceAnnotationArray removeObject:objanntation];
-                    EquipmentModel *model = [[XDDeviceManager sharedManager].allDeviceDictionary objectForKey:objanntation.model.realTopic];
-                    CLLocationCoordinate2D point = model.location2D;
-                    XDMAPointAnnotation *annotation = [[XDMAPointAnnotation alloc] init];
-                    annotation.coordinate = point;
-                    annotation.model = model;
-                    [self.bgMapView addAnnotation:annotation];
-                    [[XDDeviceManager sharedManager].allDeviceAnnotationArray addObject:annotation];
-                    if ([_equipmodel.realTopic isEqualToString:objanntation.model.realTopic]==YES) {
-                        [self.bgMapView selectAnnotation:annotation animated:YES];
-                    }
-                    
-                }
-            }
-        }
-        
+        [[XDMonitoManager sharedInstance]reloadeDeviceofObject:object change:change context:context andSelectDeviceModel:_equipmodel];
+    }
+    else if ([keyPath isEqualToString:@"deleteDeviceTopic"]==YES){
+        [[XDMonitoManager sharedInstance]deleteDeviceFromMap];
+    }
+    //删除某个围栏
+    else if ([keyPath isEqualToString:@"deleteFenceShape"]==YES){
+        [self hideMapSupportView];
+        [[XDMonitoManager sharedInstance]deleteFenceWithFenceObj:[XDFenceManager sharedManager].deleteFenceShape];
     }
 }
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    self.view.backgroundColor = [UIColor purpleColor];
+}
+
 - (void)dealloc{
      NSLog(@"---XDMonitoViewController---dealloc--");
     [[NSNotificationCenter defaultCenter] removeObserver:self name:XDChageFenceNotification object:nil];
-    [[XDDeviceManager sharedManager] removeObserver:self forKeyPath:@"changeDeviceTopic" context:nil];
+    [[XDFenceManager sharedManager]removeObserver:self forKeyPath:@"deleteFenceShape" context:nil];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

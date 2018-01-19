@@ -26,7 +26,14 @@ static  XDMaqttClientManger *_clientManager;
         [[XDClientManager shareInstance]loginWithIp:@"4things.cn" port:1883 isAutoConnect:false isAutoConnectCount:19 clientID:[XDUserManager sharedInstance].userClientId];
     }
 }
-
+/**单条 设备取消订阅*/
+- (void)unsubscriptSingleWithTopic:(NSString *)topicStr{
+     [[XDClientManager shareInstance].mqttSession unsubscribeTopic:topicStr];
+}
+/**单条 订阅*/
+- (void)subscriptionSingleWithTopic:(NSString *)topicStr{
+     [[XDClientManager shareInstance].mqttSession unsubscribeTopic:topicStr];
+}
 
 /**连接状态回调*/
 -(void)handleEvent:(MQTTSession *)xdSession event:(MQTTSessionEvent)eventCode error:(NSError *)error{
@@ -61,6 +68,9 @@ static  XDMaqttClientManger *_clientManager;
             [XDDeviceManager sharedManager].changePlaceTopic =modelObj.realTopic;
         };
         [[NSNotificationCenter defaultCenter] postNotificationName:XDMoveReceiveMessageNotification object:msgModel];
+    }
+    else if (type ==XDRemoveDeviceMessageType){
+        
     }
 }
 @end

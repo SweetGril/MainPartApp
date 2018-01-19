@@ -10,9 +10,9 @@
 /**围栏编辑时的类型*/
 @interface XDFenceEditAnnotation : MAAnnotationView<UITextFieldDelegate>{
     UILabel *statusLab;
-    UIButton *statusBtn;
     int _indexNum;
 }
+@property (nonatomic,strong)UIButton *statusBtn;
 @property (nonatomic,strong)UITextField *fenceField;
 /**围栏是否时选中状态*/
 @property (nonatomic,assign)BOOL isStatus;

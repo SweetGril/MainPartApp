@@ -11,12 +11,19 @@
  围栏管理类方法
  */
 @interface XDFenceManager : NSObject
-
 /**
  所有的围栏信息
  */
-@property (nonatomic,strong)NSMutableArray *allFenceDataArray;
+@property (nonatomic,strong) NSMutableArray *allFenceDataArray;
 @property (nonatomic,strong) NSMutableArray *fenceShapeArray;
+/**
+     KVO进行观察处理
+     需要删除的围栏类型：
+     可能是以下两种类型
+     XDCirlcle *circle
+     XDMAPolygon *polyline
+ */
+@property (nonatomic,strong) id deleteFenceShape;
 + (XDFenceManager *)sharedManager;
 /**获取所有的设备 列表信息*/
 - (NSMutableArray *)allFenceDataArray;

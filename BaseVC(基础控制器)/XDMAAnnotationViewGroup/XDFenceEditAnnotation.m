@@ -22,12 +22,12 @@
     XDCricleModel *modelObject = [XDFenceManager sharedManager].allFenceDataArray[indexNum];
     _isStatus =modelObject.statusBool;
     if (_isStatus ==NO) {
-        statusLab.text =@"OFF";
-        statusBtn.selected =NO;
+        statusLab.text =@"ON";
+        self.statusBtn.selected =YES;
     }
     else{
-        statusLab.text =@"ON";
-        statusBtn.selected =YES;
+        statusLab.text =@"OFF";
+        self.statusBtn.selected =NO;
     }
 }
 #pragma mark - Life Cycle
@@ -60,12 +60,12 @@
         self.fenceField.delegate=self;
         [bgView addSubview:self.fenceField];
         
-        statusBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        statusBtn.frame =CGRectMake(60, 40, 45, 20);
-        [statusBtn setImage:[UIImage imageNamed:@"ONIcon"] forState:UIControlStateNormal];
-        [statusBtn setImage:[UIImage imageNamed:@"OFFIcon"] forState:UIControlStateSelected];
-        [statusBtn addTarget:self action:@selector(statusBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-        [bgView addSubview:statusBtn];
+        _statusBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _statusBtn.frame =CGRectMake(60, 40, 45, 20);
+        [_statusBtn setImage:[UIImage imageNamed:@"ONIcon"] forState:UIControlStateNormal];
+        [_statusBtn setImage:[UIImage imageNamed:@"OFFIcon"] forState:UIControlStateSelected];
+        [_statusBtn addTarget:self action:@selector(statusBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [bgView addSubview:_statusBtn];
         
         UIImageView *iconImgView = [[UIImageView alloc] init];
         iconImgView.image=[UIImage imageNamed:@"historiesIconlist"];
@@ -105,6 +105,7 @@
 }
 
 - (void)statusBtnClick:(UIButton *)button{
+    
     XDCricleModel *modelObject = [XDFenceManager sharedManager].allFenceDataArray[_indexNum];
     NSString *url =[NSString stringWithFormat:@"%@/scope/update",APIHEADStr];
     NSMutableDictionary *dataDic = [[NSMutableDictionary alloc] init];
@@ -115,14 +116,14 @@
     else{
         [dataDic setValue:@"on" forKey:@"status"];
     }
+     button.selected =!button.selected;
     [[XDNetWork sharedInstance]postRequestWithUrl:url andParameters:dataDic success:^(NSDictionary *success) {
         if ([success[@"code"] intValue]==200) {
-            button.selected =!button.selected;
             if (button.selected==YES) {
-                statusLab.text = @"ON";
+                statusLab.text = @"OFF";
             }
             else{
-                statusLab.text = @"OFF";
+                statusLab.text = @"ON";
             }
             modelObject.status = dataDic[@"status"];
             modelObject.statusBool = !modelObject.statusBool;
@@ -130,8 +131,6 @@
             [[XDFenceManager sharedManager].allFenceDataArray replaceObjectAtIndex:_indexNum withObject:modelObject];
         }
     } failure:^(NSError *failure) {
-        
-        
     }];
 }
 @end

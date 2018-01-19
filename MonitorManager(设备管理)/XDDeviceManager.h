@@ -29,6 +29,8 @@
 @property (nonatomic,strong)NSString *changePlaceTopic;
 /**发生设备信息修改 deviceTopic */
 @property (nonatomic,strong)NSString *changeDeviceTopic;
+/**设备删除 */
+@property (nonatomic,strong)NSString *deleteDeviceTopic;
 
 + (XDDeviceManager *)sharedManager;
 /**获取所有的设备 列表信息*/

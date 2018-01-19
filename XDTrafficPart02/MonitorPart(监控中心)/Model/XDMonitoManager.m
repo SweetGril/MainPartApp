@@ -7,6 +7,7 @@
 //
 
 #import "XDMonitoManager.h"
+#import "XDMAPointAnnotation.h"
 static XDMonitoManager *_manager;
 @implementation XDMonitoManager
 + (XDMonitoManager*)sharedInstance{
@@ -16,7 +17,7 @@ static XDMonitoManager *_manager;
     });
     return _manager;
 }
-- (void)touchMapWithCoordinate:(CLLocationCoordinate2D)coordinate andShape:(id)shape andTouchType:(BOOL)touchStyle andEditPointAnntion:(XDEditFencePointAntion *)annotation andCirlcle:(XDCirlcle *)circleShow  andPolygon:(XDMAPolygon *)polyLineShow andBgMapView:(MAMapView *)bgMapView{
+- (void)touchMapWithCoordinate:(CLLocationCoordinate2D)coordinate andShape:(id)shape andTouchType:(BOOL)touchStyle andEditPointAnntion:(XDEditFencePointAntion *)annotation andCirlcle:(XDCirlcle *)circleShow  andShowPolygon:(XDMAPolygon *)polyLineShow andBgMapView:(MAMapView *)bgMapView{
     annotation = [[XDEditFencePointAntion alloc] init];
     if ([shape isKindOfClass:[XDCirlcle class]] ) {
         XDCirlcle *circleobj = (XDCirlcle *)shape;
@@ -59,7 +60,53 @@ static XDMonitoManager *_manager;
     [XDMonitoManager sharedInstance].selectAnnotation =annotation;
     [XDMonitoManager sharedInstance].bgMapView = bgMapView;
 }
-/**更新围栏数组中的某一个围栏 */
+
+
+/**更新围栏数组中的某一个围栏*/
+- (void)reloadSingleWithFenceModel:(XDCricleModel *)fenceModel andObj:(id)shape selectNun:(int)selectNum{
+    
+    if ([shape isKindOfClass:[XDCirlcle class]] ) {
+        XDCirlcle *circle = (XDCirlcle *)shape;
+        circle.title = fenceModel.scopeName;
+        
+        if ([fenceModel.status isEqualToString:@"on"]==YES) {
+            circle.status =@"on";
+        }
+        else{
+            circle.status =@"off";
+        }
+        circle.fenceName =fenceModel.scopeName;
+        MACircleRenderer *circleRender = (MACircleRenderer *)[self.bgMapView rendererForOverlay:circle];
+        if ([fenceModel.status isEqualToString:@"off"]==YES) {
+            circleRender.fillColor = [UIColor clearColor];
+            circleRender.strokeColor = [UIColor colorWithHexString:@"c0c0c0" withAlpha:1];
+        }
+        else{
+            circleRender.fillColor = [UIColor clearColor];
+            circleRender.strokeColor = [UIColor colorWithHexString:@"bf0000" withAlpha:1];
+        }
+        [circleRender setNeedsUpdate];
+        [[XDFenceManager sharedManager].fenceShapeArray replaceObjectAtIndex:selectNum withObject:circle];
+    }
+    else{
+        XDMAPolygon *polyline = (XDMAPolygon *)shape;
+        polyline.status =fenceModel.status;
+        polyline.fenceName =fenceModel.scopeName;
+        MAPolygonRenderer *polylineRenderer = (MAPolygonRenderer *)[self.bgMapView rendererForOverlay:polyline];
+        if ([fenceModel.status isEqualToString:@"off"]==YES) {
+            polylineRenderer.fillColor = [UIColor clearColor];
+            polylineRenderer.strokeColor = [UIColor colorWithHexString:@"c0c0c0" withAlpha:1];
+        }
+        else{
+            polylineRenderer.fillColor = [UIColor clearColor];
+            polylineRenderer.strokeColor = [UIColor colorWithHexString:@"bf0000" withAlpha:1];
+        }
+        [polylineRenderer setNeedsUpdate];
+        [[XDFenceManager sharedManager].fenceShapeArray replaceObjectAtIndex:selectNum withObject:polyline];
+    }
+}
+
+/**更新围栏数组中的某一个围栏 选中 状态下的*/
 - (void)reloadFenceWithFenceModel:(XDCricleModel *)fenceModel andObj:(id)shape selectNun:(int)selectNum{
     
     if ([shape isKindOfClass:[XDCirlcle class]] ) {
@@ -90,7 +137,6 @@ static XDMonitoManager *_manager;
         [circleRender setNeedsUpdate];
         [circleRenderer2 setNeedsUpdate];
         [[XDFenceManager sharedManager].fenceShapeArray replaceObjectAtIndex:selectNum withObject:circle];
-        
     }
     else{
         XDMAPolygon *polyline = (XDMAPolygon *)shape;
@@ -113,9 +159,69 @@ static XDMonitoManager *_manager;
         [polylineRenderer setNeedsUpdate];
         [polylineRenderer2 setNeedsUpdate];
         [[XDFenceManager sharedManager].fenceShapeArray replaceObjectAtIndex:selectNum withObject:polyline];
-       
     }
-    
 }
 
+/**删除 某一个围栏 */
+- (void)deleteFenceWithFenceObj:(id)shape{
+    if ([shape isKindOfClass:[XDCirlcle class]] ) {
+        XDCirlcle *circle = (XDCirlcle *)shape;
+        [self.bgMapView removeOverlay:circle];
+        [[XDFenceManager sharedManager].fenceShapeArray removeObject:circle];
+        
+    }
+    else if ([shape isKindOfClass:[XDMAPolygon class]]){
+        XDMAPolygon *polyline = (XDMAPolygon *)shape;
+        [self.bgMapView removeOverlay:polyline];
+        [[XDFenceManager sharedManager].fenceShapeArray removeObject:polyline];
+    }
+}
+
+/**设备的 类型 名称 发生修改*/
+- (void)reloadeDeviceofObject:(id)object change:(NSDictionary<NSString *,id>*)change context:(void *)context andSelectDeviceModel:(EquipmentModel *)equipmodel{
+    NSArray *allPoint = [self.bgMapView annotations];
+    for (int a =0; a<allPoint.count; a++) {
+        MAPointAnnotation *annotation = allPoint[a];
+        if ([annotation isKindOfClass:[XDMAPointAnnotation class]]==YES) {
+            XDMAPointAnnotation *objanntation = (XDMAPointAnnotation *)annotation;
+            if ([objanntation.model.realTopic isEqualToString:[XDDeviceManager sharedManager].changeDeviceTopic]) {
+                [self.bgMapView removeAnnotation:annotation];
+                
+                [[XDDeviceManager sharedManager].allDeviceAnnotationArray removeObject:objanntation];
+                EquipmentModel *model = [[XDDeviceManager sharedManager].allDeviceDictionary objectForKey:objanntation.model.realTopic];
+                CLLocationCoordinate2D point = model.location2D;
+                XDMAPointAnnotation *annotation = [[XDMAPointAnnotation alloc] init];
+                annotation.coordinate = point;
+                annotation.model = model;
+                
+                [self.bgMapView addAnnotation:annotation];
+                [[XDDeviceManager sharedManager].allDeviceAnnotationArray addObject:annotation];
+                //如果发生改变的设备是 选中的设备
+                if ([equipmodel.realTopic isEqualToString:objanntation.model.realTopic]==YES) {
+                    [self.bgMapView selectAnnotation:annotation animated:YES];
+                }
+            }
+        }
+    }
+}
+/**设备的 类型 名称 发生修改*/
+- (void)deleteDeviceFromMap{
+    NSArray *allPoint = [self.bgMapView annotations];
+    for (int a =0; a<allPoint.count; a++) {
+        MAPointAnnotation *annotation = allPoint[a];
+        if ([annotation isKindOfClass:[XDMAPointAnnotation class]]==YES) {
+            XDMAPointAnnotation *objanntation = (XDMAPointAnnotation *)annotation;
+            if ([objanntation.model.realTopic isEqualToString:[XDDeviceManager sharedManager].deleteDeviceTopic]) {
+                [self.bgMapView removeAnnotation:annotation];
+            }
+        }
+    }
+}
+
+/**清除数据*/
++ (void)clearManager{
+    [XDMonitoManager sharedInstance].selectAnnotation =nil;
+    [XDMonitoManager sharedInstance].circleShow = nil;
+    [XDMonitoManager sharedInstance].polyLineShow =nil;
+}
 @end
